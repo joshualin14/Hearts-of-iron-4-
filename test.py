@@ -12,4 +12,10 @@ def print_all_countries():
         results = cursor.fetchall()
 
 
+        for country in results:
+            print(f"Country: {country[2]} Leader : {country[3]}")
+
+if __name__ == "__main__":
+    print_all_countries()
+
 
