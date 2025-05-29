@@ -7,15 +7,15 @@ def print_parties_glossary():
 
 #Asks for what country you are looking for#
 def country():
-    with sqlite3.connect(DATABASE) as db:
-            cursor = db.cursor()
-            sql = "Select country_name, leader FROM countries"
-            cursor.execute(sql,(country,))
-            results = cursor.fetchall()
+     with sqlite3.connect(DATABASE) as db:
+          cursor = db.cursor()
+          sql = "Select country_name, leader FROM countries"
+          cursor.execute(sql,(country,))
+          results = cursor.fetchall()
 
 
-            for country in results:
-                 print(f"Country: {country[2]} ")
+          for country in results:
+               print(f"Country: {country[2]} ")
 
                 
 def government():
@@ -43,6 +43,8 @@ while True:
     Promt = input("Searching for ? ")
 
     if Promt == "1":
+         country.connect()
+         
         
         
 
